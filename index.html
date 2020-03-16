@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How's the Weather?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <section class="hero is-info">
+        <div class="container">
+            <h1 class="title">
+                Want to know the Weather?
+            </h1>
+            <p class="subtitle">
+                Treat me like your tall friends!
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-gapless">
+            <div class="column is-two-fifths is-warning">
+                <div class="tile">
+                    <form action="submit">
+                        <input class="input is-large" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
+                        <input class="button is-danger" type="submit" value="How's the weather up there?" id="submitbtn">
+                    </form>
+                </div>
+            </div>
+            <div id="savedCities"></div>
+            <div class="column">
+                <div class="card-content hero is-danger">
+                    <div id="currentWeather" class="content">
+                        The weather will show up here, and it'll be pretty cool.
+                    </div>
+                    <footer class="card-footer is-dark">
+                        <div class="card-footer-item">Today</div>
+                        <div class="card-footer-item">Tomorrow</div>
+                        <div class="card-footer-item">The day after that</div>
+                        <div class="card-footer-item">The day after that</div>
+                        <div class="card-footer-item">The day after that</div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
