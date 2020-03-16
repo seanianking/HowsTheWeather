@@ -20,17 +20,19 @@
             </p>
         </div>
     </section>
-    <div class="container">
-        <div class="columns is-gapless">
-            <div class="column is-two-fifths is-warning">
-                <div class="tile">
+    <div class="container ">
+        <div class="columns level is-gapless">
+            <div class="column is-two-fifths">
+                <div class="hero is-warning">
                     <form action="submit">
-                        <input class="input is-large" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
+                        <input class="input" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
                         <input class="button is-danger" type="submit" value="How's the weather up there?" id="submitbtn">
                     </form>
                 </div>
             </div>
+
             <div id="savedCities"></div>
+
             <div class="column">
                 <div class="card-content hero is-danger">
                     <div id="currentWeather" class="content">
