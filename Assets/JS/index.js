@@ -12,11 +12,13 @@ function getTheWeather() {
         //  callback to set the returned data to a JSON object
         weather = {
             Name: response.name,
-            Weather Icon: ,
-            Temperature: ,
-            Humidity: ,
-            Windspeed: ,
-            UV index:
+            WeatherIcon: response.weather.icon,
+            WeatherDescription: response.weather.description,
+            Temperature: response.main.temp,
+            Humidity: response.main.humidity,
+            Windspeed: response.wind.speed,
         }
+        console.log(weather);
+
     })
 }
