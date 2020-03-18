@@ -11,7 +11,12 @@ function getTheWeather() {
     }).then(function(response) {
         //  callback to set the returned data to a JSON object
         weather = {
-            Name:
+            Name: response.name,
+            Weather Icon: ,
+            Temperature: ,
+            Humidity: ,
+            Windspeed: ,
+            UV index:
         }
     })
 }
