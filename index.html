@@ -30,20 +30,28 @@
                         <input class="button margin-top is-danger is-medium" type="submit" value="How's the weather up there?" id="submit">
                     </form>
                     <br>
-                    <div class="content border-top" id="savedCities">
+                    <div class="content border-top">
                         <div class="content box hero is-danger has-text-centered has-text-white">
-                            <h3>Previously searched cities:</h3>
+                            <h3 style="color: white;">Previously searched cities:</h3>
+                            <hr>
+                            <ul id="savedCities"></ul>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-
             <div class="column">
                 <div class="card-content hero box is-danger">
-                    <div id="currentWeather" class="content hero is-warning has-text-centered has-text-weight-semibold">
-                        The weather will show up here, and it'll be pretty cool.
+                    <div id="currentWeather" class="content hero is-warning has-text-centered">
+                        <h2>The weather will show up here, and it'll be pretty cool.</h2>
+                        <p class="cityDisplay" id="searchedCity"></p>
+                        <img style="width: 150px; align-self: center !important;" id="weatherIcon" src="" alt="">
+                        <p class="displayResult" id="weatherType"></p>
+                        <p class="displayResult" id="currentTemp"></p>
+                        <p class="displayResult" id="currentHumid"></p>
+                        <p class="displayResult" id="currentWind"></p>
+                        <p class="displayResult" id="currentUV"></p>
                     </div>
                     <footer class="card-footer is-dark">
                         <div class="card-footer-item">Today</div>
