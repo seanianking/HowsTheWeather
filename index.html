@@ -27,10 +27,13 @@
                 <div class="hero has-text-centered box is-warning ">
                     <form action="submit">
                         <input class="input is-large" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
-                        <input class="button is-danger is-medium" type="submit" value="How's the weather up there?" id="submit">
+                        <input class="button margin-top is-danger is-medium" type="submit" value="How's the weather up there?" id="submit">
                     </form>
-                    <div class="content" id="savedCities">
-                        This is a previously searched city
+                    <br>
+                    <div class="content border-top" id="savedCities">
+                        <div class="content box hero is-danger has-text-centered has-text-white">
+                            <h3>Previously searched cities:</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,7 +42,7 @@
 
             <div class="column">
                 <div class="card-content hero box is-danger">
-                    <div id="currentWeather" class="content hero is-warning">
+                    <div id="currentWeather" class="content hero is-warning has-text-centered has-text-weight-semibold">
                         The weather will show up here, and it'll be pretty cool.
                     </div>
                     <footer class="card-footer is-dark">

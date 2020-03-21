@@ -1,0 +1,12 @@
+.border-top {
+    border: black;
+    border-top: 10px black !important;
+}
+
+.margin-top {
+    margin-top: 20px !important;
+}
+
+.info {
+    font-size: xx-large !important;
+}

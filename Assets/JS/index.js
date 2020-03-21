@@ -22,20 +22,20 @@ function getTheCurrentWeather() {
         }
         console.log(weather);
         //Callback function to display the weather
+        showCurrentWeather()
     })
 };
 
 $("#submit").click(function(event) {
     event.preventDefault();
-    // getTheCurrentWeather();
-    console.log(event)
-    alert("you clicked me")
+    getTheCurrentWeather();
+
 });
 
 function showCurrentWeather() {
     $("#currentWeather").empty();
     $.each(weather, function(key, value) {
-        var current = $("<p class='info'></p>");
+        var current = $("<p class='info has-text-weight-semibold'></p>");
         $("#currentWeather").append(current);
         $("#currentWeather").append(current.text = (key + " : " + value));
         console.log(key);
