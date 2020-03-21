@@ -15,12 +15,18 @@ function getTheWeather() {
         weather = {
             Name: response.name,
             WeatherIcon: response.weather.icon,
-            WeatherDescription: response.weather.description,
+            WeatherDescription: response.weather[0].description,
             Temperature: response.main.temp,
             Humidity: response.main.humidity,
             Windspeed: response.wind.speed,
         }
         console.log(weather);
-
+        //Callback function to display the weather
     })
-}
+};
+
+$("#submit").click(function() {
+    preventDefault();
+    // getTheWeather();
+    alert("you clicked me")
+})

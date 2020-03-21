@@ -7,10 +7,11 @@
     <title>How's the Weather?</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="./Assets/Style/style.css">
 </head>
 
 <body>
-    <section class="hero is-info">
+    <section class="hero is-bold is-info has-text-centered">
         <div class="container">
             <h1 class="title">
                 Want to know the Weather?
@@ -21,12 +22,12 @@
         </div>
     </section>
     <div class="container ">
-        <div class="columns is-gapless">
-            <div class="column hero is-warning is-two-fifths border-right">
-                <div class="hero align-content-middle">
+        <div class="columns is-gapless box">
+            <div class="column hero is-two-fifths ">
+                <div class="hero has-text-centered box is-warning ">
                     <form action="submit">
                         <input class="input is-large" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
-                        <input class="button is-danger is-medium" type="submit" value="How's the weather up there?" id="submitbtn">
+                        <input class="button is-danger is-medium" type="submit" value="How's the weather up there?" id="submit">
                     </form>
                 </div>
             </div>
@@ -34,7 +35,7 @@
             <div id="savedCities"></div>
 
             <div class="column">
-                <div class="card-content hero is-danger">
+                <div class="card-content hero box is-danger">
                     <div id="currentWeather" class="content hero is-warning">
                         The weather will show up here, and it'll be pretty cool.
                     </div>
