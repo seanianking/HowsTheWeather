@@ -25,20 +25,22 @@ function getTheCurrentWeather() {
             $("#currentHumid").text("Humidity: " + response.main.humidity + '%');
             $("#currentWind").text("Wind Speed: " + Math.round(response.wind.speed) + 'MPH');
 
-
+        
             //UV Index API call and appending functionality
             var queryURLuv = `https://api.openweathermap.org/data/2.5/uvi/forecast?appid=`+apikey+`&lat=`+response.coord.lat+`&lon=`+response.coord.lon+`&cnt=1`
+
             $.ajax({
                     url: queryURLuv,
                     method: "GET"
                 })
                 .then(function(response) {
-                    $('#currentUv').text("UV Index: " + response[0].value)
+                    $('#currentUV').text("UV Index: " + response[0].value)
                     console.log(response)
-                })
-        }).fail(function() {
-            // alert('City not found. Try again, please!');
-        });
+                }).fail(function() {
+                    alert('City not found. Try again, please!');
+                });
+            })
+       
 };
 
 $("#submit").click(function(event) {
