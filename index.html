@@ -26,14 +26,19 @@
             <div class="column hero is-two-fifths ">
                 <div class="hero has-text-centered box is-warning ">
                     <form action="submit">
-                        <input class="input is-large" type="text" name="city" id="pickedCity" placeholder="Pick a city, any city.">
-                        <input class="button margin-top is-danger is-medium" type="submit" value="How's the weather up there?" id="submit">
+                        <input class="input is-large" type="text" name="city" id="pickedCity"
+                            placeholder="Pick a city, any city.">
+                        <input class="button margin-top is-danger is-medium" type="submit"
+                            value="How's the weather up there?" id="submit">
                     </form>
                     <br>
                     <div class="content border-top">
-                        <div class="content box hero is-danger has-text-centered has-text-white">
-                            <h3 style="color: white;">Previously searched cities:</h3>
-                            <hr>
+                        <div class="content box hero is-danger has-text-centered">
+                            <h3 class="sectionHead" >
+                                Previously searched cities:
+                                <hr>
+                            </h3>
+                            
                             <ul id="savedCities"></ul>
                         </div>
                     </div>
@@ -53,13 +58,39 @@
                         <p class="displayResult" id="currentWind"></p>
                         <p class="displayResult" id="currentUV"></p>
                     </div>
-                    <footer class="card-footer is-dark">
-                        <div class="card-footer-item">Today</div>
-                        <div class="card-footer-item">Tomorrow</div>
-                        <div class="card-footer-item">The day after that</div>
-                        <div class="card-footer-item">The day after that</div>
-                        <div class="card-footer-item">The day after that</div>
-                    </footer>
+                    <h3 class="has-text-centered sectionHead" >Find your five day forecast here:<hr></h3>
+                    <div class="columns is-danger has-text-centered" id="forecast">
+                        <div class="column hero is-info">
+                            <p class="displayResult">Date</p>
+                            <img style="width: 150px; align-self: center !important;" id="forecastIcon" src="" alt="">
+                            <p class="displayResult">Temp</p>
+                            <p class="displayResult">UV index</p>
+                        </div>
+                        <div class="column hero is-info">
+                            <p class="displayResult">Date</p>
+                            <img style="width: 150px; align-self: center !important;" id="forecastIcon" src="" alt="">
+                            <p class="displayResult">Temp</p>
+                            <p class="displayResult">UV index</p>
+                        </div>
+                        <div class="column hero is-info">
+                            <p class="displayResult">Date</p>
+                            <img style="width: 150px; align-self: center !important;" id="forecastIcon" src="" alt="">
+                            <p class="displayResult">Temp</p>
+                            <p class="displayResult">UV index</p>
+                        </div>
+                        <div class="column hero is-info">
+                            <p class="displayResult">Date</p>
+                            <img style="width: 150px; align-self: center !important;" id="forecastIcon" src="" alt="">
+                            <p class="displayResult">Temp</p>
+                            <p class="displayResult">UV index</p>
+                        </div>
+                        <div class="column hero is-info">
+                            <p class="displayResult">Date</p>
+                            <img style="width: 150px; align-self: center !important;" id="forecastIcon" src="" alt="">
+                            <p class="displayResult">Temp</p>
+                            <p class="displayResult">UV index</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

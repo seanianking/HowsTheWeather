@@ -1,4 +1,3 @@
-var weather = weather;
 
 var apikey = "22a6eb6c0d59d0b9ac34a811b19c54e6";
 
@@ -39,14 +38,32 @@ function getTheCurrentWeather() {
                 }).fail(function() {
                     alert('City not found. Try again, please!');
                 });
-            })
-       
-};
+            })};
+
+function getTheFutureWeather () {
+//API call for the 5 day forecast
+var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q="+$("#pickedCity").val().trim()+"&mode=JSON&units=imperial&appid="+apikey;
+console.log(forecastURL);
+
+$.ajax({
+    url: forecastURL,
+    method: "GET"
+})
+.then(function(response){
+    //Log the resulting object
+    console.log(response);
+
+    //Transfer the content to HTML:
+    
+
+    // temp at noon is displayed
+
+})};
 
 $("#submit").click(function(event) {
     event.preventDefault();
     getTheCurrentWeather();
-
+    getTheFutureWeather();
 });
 
 
