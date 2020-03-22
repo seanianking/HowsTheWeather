@@ -1,5 +1,7 @@
 
 var apikey = "22a6eb6c0d59d0b9ac34a811b19c54e6";
+var previousCity = JSON.parse(localStorage.getItem("previousCity")) || 'Salt Lake City'
+var searchedCityArr = JSON.parse(localStorage.getItem("cityArr")) || [];
 
 function getTheCurrentWeather() {
     //  API route, pulls city information from the user's input on the web page, then "trims" it by eliminating and spaces in front or behind of the text. Also converts units to imperial system.  //
@@ -87,33 +89,23 @@ function getTheFutureWeather() {
 
 
 
-var searchedCityArr = JSON.parse(localStorage.getItem(searchedCityArr)) || [];
 
-//Function to push searched cities to localStorage array
-function saveSearchedCities(){
-    localStorage.setItem('searchedCityArr', JSON.stringify($('#pickedcity')))
-}
-
-//Function to pull any previously searched cities
-function pullSearchedCities(){
-
-    $.each(searchedCityArr, function(index, object){
-        $('#savedCities').append()
-    })
-}
-
-
-//Function to post searched cities to HTML
-function postSearchedCities(){
-    var searchedCityArr = []
-}
 
 
 $("#submit").click(function(event) {
-                    event.preventDefault();
+    event.preventDefault();
     getTheCurrentWeather();
     getTheFutureWeather();
-    // postSearchedCities();
+
+    var cityName = $('#pickedCity')
+    //Create object and push to localStorage
+    var cityNameJSON = {
+        city: cityName
+    }
+    
+    searchedCityArr.push(cityNameJSON);
+    localStorage.setItem('searchedCityArr', JSON.stringify(searchedCityArr))
+    localStorage.setItem('city', JSON.stringify(cityName))
 });
 
 
