@@ -97,8 +97,8 @@ $("#submit").click(function(event) {
     getTheCurrentWeather();
     getTheFutureWeather();
 
+    //Create object and push city info to localStorage
     var cityName = $('#pickedCity').val();
-    //Create object and push to localStorage
     var cityNameJSON = {
         city: cityName
     }
@@ -106,12 +106,28 @@ $("#submit").click(function(event) {
     searchedCityArr.push(cityNameJSON);
     localStorage.setItem('searchedCityArr', JSON.stringify(searchedCityArr))
     localStorage.setItem('previousCity', JSON.stringify(cityName))
+
+    $('#savedCities').empty()
+    
+    pullSearchedCities();
+    
 });
 
 
+//Function to pull cities from localStorage and post to HTML
+function pullSearchedCities(){
 
+    $.each(searchedCityArr, function(index, object){
+        
+        var postCity = $(`<p class="displayResult"></p>`);
 
+        postCity.text(object.city)
 
+        $('#savedCities').append(postCity)
+    })
+}
+
+pullSearchedCities();
 
 
 
