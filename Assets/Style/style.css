@@ -23,6 +23,9 @@
 .regap {
     margin: .75rem;
 }
-.w-95 {
+.w-99 {
     width: 99% !important;
+}
+.h-200{
+    height: 200% !important;
 }
